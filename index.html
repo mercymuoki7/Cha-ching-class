@@ -1,0 +1,90 @@
+export default function ChaChingClass() {
+  return (
+    <div className="bg-gray-50 text-gray-800">
+      {/* Header */}
+      <header className="flex justify-between items-center p-6 bg-white shadow-md">
+        <h1 className="text-2xl font-bold text-green-600">💰 Cha-Ching Class</h1>
+        <nav className="space-x-6">
+          <a href="#home" className="hover:text-green-600">Home</a>
+          <a href="#lessons" className="hover:text-green-600">Lessons</a>
+          <a href="#blog" className="hover:text-green-600">Blog</a>
+          <a href="#about" className="hover:text-green-600">About</a>
+          <a href="#contact" className="hover:text-green-600">Contact</a>
+        </nav>
+        <button className="bg-green-600 text-white px-4 py-2 rounded-xl shadow hover:bg-green-700">Join Now</button>
+      </header>
+
+      {/* Hero Section */}
+      <section id="home" className="text-center py-20 bg-gradient-to-r from-green-100 via-yellow-50 to-green-100">
+        <h2 className="text-4xl font-extrabold mb-4">Master Your Money Without the Boring Stuff!</h2>
+        <p className="text-lg mb-6">Practical lessons on saving, debt, and money management – explained simply.</p>
+        <button className="bg-yellow-400 px-6 py-3 rounded-2xl shadow hover:bg-yellow-500 font-bold">Get Started Free</button>
+      </section>
+
+      {/* Why Section */}
+      <section className="grid grid-cols-1 md:grid-cols-4 gap-6 px-10 py-16">
+        {[
+          {icon: "💸", text: "Save smarter"},
+          {icon: "🏦", text: "Tackle debt stress-free"},
+          {icon: "🎯", text: "Set money goals"},
+          {icon: "🎮", text: "Fun, bite-sized lessons"},
+        ].map((item, i) => (
+          <div key={i} className="bg-white p-6 rounded-2xl shadow text-center">
+            <div className="text-4xl mb-4">{item.icon}</div>
+            <p className="font-semibold">{item.text}</p>
+          </div>
+        ))}
+      </section>
+
+      {/* Lessons Section */}
+      <section id="lessons" className="px-10 py-16 bg-gray-100">
+        <h3 className="text-3xl font-bold text-center mb-10">Our Lessons</h3>
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+          {["Saving Made Simple", "Debt Detox", "Budget Like a Boss", "Money Myths Busted"].map((lesson, i) => (
+            <div key={i} className="bg-white p-6 rounded-2xl shadow hover:scale-105 transition text-center">
+              <h4 className="font-bold mb-2">{lesson}</h4>
+              <p className="text-sm text-gray-600 mb-4">Short description of {lesson.toLowerCase()}.</p>
+              <button className="bg-green-500 text-white px-4 py-2 rounded-xl hover:bg-green-600">Start Lesson</button>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Blog Section */}
+      <section id="blog" className="px-10 py-16">
+        <h3 className="text-3xl font-bold text-center mb-10">Money Tips Blog</h3>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {["Why Your Coffee Habit Isn’t Ruining Your Finances", "5 Fun Ways to Save for a Trip", "Debt Isn’t a Monster – Here’s How to Tame It"].map((post, i) => (
+            <div key={i} className="bg-white p-6 rounded-2xl shadow hover:scale-105 transition">
+              <h4 className="font-bold mb-2">{post}</h4>
+              <p className="text-sm text-gray-600">Quick intro to the blog post content...</p>
+              <a href="#" className="text-green-600 font-semibold mt-2 inline-block">Read More →</a>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section id="about" className="px-10 py-16 bg-yellow-50 text-center">
+        <h3 className="text-3xl font-bold mb-6">About Cha-Ching Class</h3>
+        <p className="max-w-2xl mx-auto text-lg">At Cha-Ching Class, we believe financial literacy doesn’t have to be complicated or boring. We break down money talk into fun, easy, and practical steps for everyday life.</p>
+      </section>
+
+      {/* Contact Section */}
+      <section id="contact" className="px-10 py-16 text-center bg-gray-100">
+        <h3 className="text-3xl font-bold mb-6">Drop Us a Cha-Ching! 💬</h3>
+        <form className="max-w-md mx-auto grid gap-4">
+          <input type="text" placeholder="Your Name" className="p-3 rounded-xl border" />
+          <input type="email" placeholder="Your Email" className="p-3 rounded-xl border" />
+          <textarea placeholder="Your Message" className="p-3 rounded-xl border" rows={4}></textarea>
+          <button className="bg-green-600 text-white px-6 py-3 rounded-xl hover:bg-green-700">Send Message</button>
+        </form>
+      </section>
+
+      {/* Footer */}
+      <footer className="p-6 text-center bg-green-600 text-white">
+        <p>© {new Date().getFullYear()} Cha-Ching Class. All rights reserved.</p>
+      </footer>
+    </div>
+  )
+}
